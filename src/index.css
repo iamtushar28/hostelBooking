@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection{
+    background-color: black;
+    color: white;
+}
+
+.clip{
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 58%, 50% 58%);
+}
+
+.border-for-img{
+    border-radius: 80px 0px 80px 0px;
+-webkit-border-radius: 80px 0px 80px 0px;
+-moz-border-radius: 80px 0px 80px 0px;
+}
+.border-for-img2{
+    border-radius: 0px 80px 0px 80px;
+-webkit-border-radius: 0px 80px 0px 80px;
+-moz-border-radius: 0px 80px 0px 80px;
+}
+
+.bg-glass{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.1px);
+-webkit-backdrop-filter: blur(7.1px);
+}
+
+.zoom{
+ 
+    transition: transform 400ms; /* Animation */
+}
+  
+.zoom:hover{
+    transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.zoomImg{
+ 
+    transition: transform 400ms; /* Animation */
+}
+  
+.zoomImg:hover{
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* Horizontal scrolling for room cards */
+.scroll-container {
+    display: flex;
+    gap: 16px; /* General gap for small screens */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 16px; /* Adds padding for aesthetics */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+  
+  /* Hide scrollbar on all browsers */
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar for Webkit browsers (Chrome, Safari, etc.) */
+}
+  
+.scroll-container {
+    -ms-overflow-style: none;  /* Hides scrollbar for Internet Explorer and Edge */
+    scrollbar-width: none;  /* Hides scrollbar for Firefox */
+}
+.bg-SVG{
+  background-image: url(./assets/shapes.svg);
+  height: 100%;
+  width: 100%;
+}
